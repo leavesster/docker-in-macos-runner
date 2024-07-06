@@ -1,13 +1,17 @@
 name: docker in macos
 
+
 on:
     push:
         branches:
             - main
+        paths:
+            - 'dockerfile'
+            - '.github/workflows/docker.yml'
     workflow_dispatch:
 
 jobs:
-    build:
+    docker-build:
         runs-on: macos-13
         steps:
         - name: Set up Docker
