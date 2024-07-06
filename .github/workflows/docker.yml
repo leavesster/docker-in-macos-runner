@@ -11,7 +11,7 @@ jobs:
         runs-on: macos-13
         steps:
         - name: Set up Docker
-          run: brew install docker
+          run: brew install docker colima
         - name: Build the Docker image
           run: |
             colima start
