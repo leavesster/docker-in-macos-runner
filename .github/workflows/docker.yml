@@ -11,5 +11,7 @@ jobs:
         runs-on: macos-13
         steps:
         - uses: actions/checkout@v4
+        - name: Set up Docker Buildx
+          uses: docker/setup-buildx-action@v1
         - name: Build the Docker image
           run: docker build --rm -f Dockerfile -t my-image .
