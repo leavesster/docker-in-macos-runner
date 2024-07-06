@@ -10,8 +10,9 @@ jobs:
     build:
         runs-on: macos-13
         steps:
-        - uses: actions/checkout@v4
         - name: Set up Docker
           run: brew install docker
         - name: Build the Docker image
-          run: docker build --rm -f Dockerfile -t my-image .
+          run: |
+            colima start
+            docker build --rm -f Dockerfile -t my-image .
