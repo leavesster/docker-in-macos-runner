@@ -14,6 +14,8 @@ jobs:
     docker-build:
         runs-on: macos-13
         steps:
+        - name: Checkout the repository
+          uses: actions/checkout@v4
         - name: Set up Docker
           uses: douglascamata/setup-docker-macos-action@v1-alpha
         - name: Build the Docker image
