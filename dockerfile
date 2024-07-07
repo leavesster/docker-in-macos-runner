@@ -1,1 +1,3 @@
 FROM scratch
+
+COPY ./README.md /README.md
